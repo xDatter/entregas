@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    outline: 1px solid grey;
 }
 
 body{
@@ -12,6 +11,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url("/recursos/imagenes/bg2.jpg");
+    background-size: cover;
 
 }
 
@@ -21,7 +22,7 @@ body{
     margin:  20px auto;
     width: 95%;
     border-radius: 25px;
-    background-color: #bbbbbb70 ;
+    background-color: #bbbbbb99 ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +45,21 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
+    font-size: 25px;
 
 }
 .buscador__input{
     width: 80%;
+    height: 50px;
+    font-size: 25px;
+    padding: 5px 10px;
+}
+.buscador__buscar{
+    height: 50px;
+    font-size: 20px;
+    background-color: #f33;
+    padding: 5px 5px;
+    color: #fff;
 }
 
 
@@ -83,14 +95,26 @@ body{
     height: 200px;
 }
 .controles{
-    display: flex;
     flex-basis: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 
 }
 .botonControl{
-    width: 30px;
-    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
 }
+
+.botonControl img{
+    width: 100%;
+
+}
+
 .navLateral{
     flex-grow: 1;
     align-content: center;
@@ -115,4 +139,33 @@ body{
 
 footer{
     height: 100px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+    
+
+.imgFooter{
+    height: 70px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.informacionFooter{
+    height: 29px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+}
+
+.imgFooter img{
+    height: 100%;
 }
