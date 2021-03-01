@@ -11,18 +11,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
 .contenedorPrincipal{
-    position: fixed;
+    position: relative;
     top: 10px;
-    left: auto;
-    right: auto;
+    margin:  20px auto;
     width: 95%;
-    height: 90vh;
     border-radius: 25px;
-    background-color: rgb(166, 205, 212);
+    background-color: #bbbbbb70 ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,17 +33,21 @@ body{
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
 
 }
 
 .buscador{
-    position: absolute;
-    margin: 10px;
+    position: relative;
+    margin: 20px;
     flex-basis: 100%;
-    outline: solid 2px chocolate;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
+}
+.buscador__input{
+    width: 80%;
 }
 
 
@@ -52,18 +55,16 @@ body{
     position: relative;
     flex-wrap: wrap;
     display: flex;
-    height: 100%;
+    min-height: 500px;
     flex-grow: 4;
-    
-    
-    outline: green solid 2px;
+  
 }
 
 .opcionesLateralDer{
     position: relative;
     flex-wrap: wrap;
     display: flex;
-    height: 100%;
+    min-height: 500px;
     max-width: 200px;
     flex-grow: 1;
 
@@ -73,13 +74,13 @@ body{
     display: block;
     flex-basis: 100%;
     margin: auto;
+    padding: 20px;
 }
 .marcoImagen{
     display: block;
-    margin: auto 10px;
+    margin: auto 50px;
     flex-basis: 100%;
     height: 200px;
-    outline: solid 2px pink;
 }
 .controles{
     display: flex;
@@ -95,11 +96,12 @@ body{
     align-content: center;
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
 }
 .botonNav{
     flex-basis: 100%;
-    height: 100px;
+    flex-grow: 1;
     align-content: center;
     justify-content: center;
 
@@ -109,4 +111,8 @@ body{
 .botonNav img{
     height: 90%;
 
+}
+
+footer{
+    height: 100px;
 }
