@@ -19,7 +19,7 @@ async function consultarPKM(url){
         stats+= element.stat.name+"<br>"+element.base_stat+"<br><br><br><br>"
     });
 
-    $(".nombrePKM__h3").html(`ID -${pokemon.id} - ${pokemon.name}`);
+    $(".nombrePKM__h3").html(`ID ${pokemon.id} ||  ${pokemon.name}`);
     $(".nombrePKM__h4").html(`ID -${pokemon.id} - ${pokemon.name}`);
     $(".imagenPKM1").toggleClass("hidear",false);
     $(".imagenPKM2").toggleClass("hidear",true);
