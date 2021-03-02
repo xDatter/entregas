@@ -103,17 +103,29 @@ body{
     background: linear-gradient(to bottom,#33333339, transparent 90% );
 }
 .marcoImagen{
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     height: 300px;
     padding: 50px;
     z-index: 50;
 }
 
-.imagenPKM{
-    width: 150px;
-}
+.imagenPKM1 {
+    position: absolute;
+    width: 200px;
+    z-index: 4;
 
+}
+.imagenPKM2{
+    position: absolute;
+
+    width: 200px;
+    z-index: 5;
+}
+.hidear{
+    visibility: hidden;
+}
 .relleno{
     margin: auto;
 }
@@ -161,6 +173,45 @@ body{
     flex-wrap: nowrap;
     flex-direction: column;
 }
+.navDespliegue{
+    position: absolute;
+    display: flex;
+    transition: 1s;
+    overflow-y: scroll;
+    background: #22222201;
+    width: 700px;
+    height: 360px;
+    /* border: green 3px solid; */
+    left: -50vw;
+    z-index: 40;
+    padding: 20px;
+}
+.navDespliegue p{
+    color: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+.navDespliegue1{
+    visibility: hidden;
+}
+.navDespliegue2{
+    visibility: hidden;
+}
+.navDespliegue3{
+    visibility: hidden;
+}
+.cortina{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.692);
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 39;
+    visibility: hidden;
+    transition: 1s;
+
+}
+
 .botonNav{
     flex-basis: 150px;
     min-width: 150px;
@@ -188,6 +239,7 @@ body{
 .botonNav img{
     width: 100px;
 }
+
 footer{
     position:absolute;
     top: 250px;
