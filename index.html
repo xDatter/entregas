@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="pokedex.css">
     <title>xDarret Pokedex!</title>
     <style>
@@ -13,44 +14,65 @@
 <body>
 <div class="contenedorPrincipal">
     <div class="contenedor">
-        <div class="buscador">
-            <input placeholder="Buscador pokemon" class="buscador__input" type="text">
-            <input type="button" class="buscador__buscar" value="Buscar!" >
+        <div class="container">
+            <div class="buscador">
+                <input  class="buscador__input" placeholder="Buscador pokemon" type="text">
+                <input type="button" class="buscador__buscar" value="Buscar!" >
+            </div>
         </div>
         <div class="opcionesLateralIzq">
 
-            <div class="nombrePKM">
+            <div class="nombrePKM container">
                 <h3 class="nombrePKM__h3">Nombre place holder</h3>                
                 <h5 class="nombrePKM__h4">tipos place holder</h5>
 
             </div>
-            <div class="marcoImagen">
-                <img class="imagenPKM" src="" alt="pendiente">
-            </div>
+                <div class="espacioCompletoImg">
+                    <div class="marcoImagen">
+                        <img class="imagenPKM" src="" alt="pendiente">
+                    </div>
+                </div>
             <div class="controles">
                 <div class="botonControl controles__previo">
-                    <img src="recursos/imagenes/left.png" alt="">
+                    <div class="controlImgContenedor">
+                        <img src="recursos/imagenes/left.png" alt="">
+                    </div>
+                    <p>Anterior</p>
                 </div>
+                <div class="relleno"></div>
                 <div class="botonControl controles__shiny">
-                    <img src="recursos/imagenes/shiny.ico" alt="">
+                    <div class="controlImgContenedor">
+                        <img src="recursos/imagenes/shiny.ico" alt="">
+                    </div>
+                    <p>Normal / Shiny</p>
                 </div>
+                <div class="relleno"></div>
                 <div class="botonControl controles__siguiente">
-                    <img src="recursos/imagenes/right.png" alt="">
+                    <div class="controlImgContenedor">
+                        <img src="recursos/imagenes/right.png" alt="">
+                    </div>
+                    <p>Siguiente</p>
                 </div>
             </div>
         </div>
         <div class="opcionesLateralDer">
             <nav class="navLateral">
                 <div class="botonNav navLateral__opcion1">
-                    <img src="recursos/imagenes/pkb1.ico" alt="img para algo">
+                    <div class="navImgContenedor">
+                        <img src="recursos/imagenes/pkb1.ico" alt="img para algo">
+                    </div>
                     <p>Habilidades</p>
                 </div>
                 <div class="botonNav navLateral__opcion2">
-                    <img src="recursos/imagenes/pkb2.ico" alt="img para algo">
-                    <p>Línea evolutiva</p>
+                    <div class="navImgContenedor">
+                        <img src="recursos/imagenes/pkb2.ico" alt="img para algo">
+                    </div>
+                    <p>Estadísticas</p>
                 </div>
                 <div class="botonNav navLateral__opcion3">
-                    <img src="recursos/imagenes/pkb3.ico" alt="img para algo">
+                    <div class="navImgContenedor">
+                        <img src="recursos/imagenes/pkb3.ico" alt="img para algo">
+                    </div>
                     <p>Biología</p>
                 </div>
             </nav>

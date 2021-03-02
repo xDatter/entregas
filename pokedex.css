@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 body{
@@ -14,40 +13,48 @@ body{
     background-image: url("recursos/imagenes/bg2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
 }
-
 .contenedorPrincipal{
     position: relative;
-    top: 10px;
-    margin:  10px auto;
+    margin:  10px auto 0;
     width: 95%;
+    height: 97vh;
     border-radius: 25px;
     background-color: #bbbbbb99 ;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    z-index: 10;
+    padding: 10px;
 }
-
 .contenedor{
     width: 90%;
-    height: 90%;
+    height: 100%;
+    margin-top: 0;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
 }
+.container{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    max-height: 50px;
 
+}
 .buscador{
     position: relative;
-    margin: 20px auto 30px;
-    width:700px ;    
+    width:80%;
+    margin: 0 auto;
     display: flex;
     align-content: center;
     justify-content: center;
     font-size: 25px;
     box-shadow: 3px 3px 10px;
+
 
 }
 .buscador__input{
@@ -63,98 +70,111 @@ body{
     padding: 5px 5px;
     color: #fff;
 }
-
-
 .opcionesLateralIzq{
     position: relative;
-    flex-wrap: wrap;
+    flex-direction: column;
     display: flex;
-    min-height: 500px;
-    flex-grow: 4;
-  
+    flex-grow: 6;
+    padding: 10px;
 }
-
 .opcionesLateralDer{
     position: relative;
-    flex-wrap: wrap;
+    flex-direction: column;
     display: flex;
-    min-height: 500px;
     max-width: 200px;
     flex-grow: 1;
+    padding: 10px;
 
-
+    
 }
 .nombrePKM{
     display: block;
     flex-basis: 100%;
-    margin: auto;
-    padding: 20px;
+    background: linear-gradient(to right, #33333339 40%, #ff222299 70%, #2222ff99 85%);
+    border-radius: 5px;
+    max-height: 15%;
+}
+
+.espacioCompletoImg{
+    display: flex;
+    background: linear-gradient(to bottom,#33333339, transparent 90% );
 }
 .marcoImagen{
     display: block;
-    margin: auto 50px;
-    flex-basis: 100%;
-    height: 200px;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.relleno{
+    margin: auto;
 }
 .controles{
-    flex-basis: 100%;
     display: flex;
-    align-content: center;
-    justify-content: space-around;
-
+    align-content: space-between;
+    justify-content: baseline;
+    flex-wrap: wrap-reverse;
+    margin-top: auto;
+    color: #ddd;
+    font-size: 20px;
+    max-height: 150px;
 }
 .botonControl{
-    width: 80px;
-    height: 80px;
     display: flex;
+    flex-grow: 1;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
+    text-align: center;
+    background-color: #44444499;
+    border-radius: 5px;
+    margin: 0 ;
+    height: 150px;
+    max-width: 300px;
 
 }
-
-.botonControl img{
-    width: 100%;
-
+.controlImgContenedor img{
+    width: 80px;
 }
-
 .navLateral{
     flex-grow: 1;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-
 }
 .botonNav{
-    flex-basis: 70%;
-    flex-grow: 1;
+    flex-basis: 150px;
+    min-width: 150px;
+    height: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
     align-content: center;
     justify-content: center;
     text-align: center;
     background-color:#44444499;
-    margin: 10px;
     border-radius: 5px;
     color: #ddd;
-}
+    font-size: 20px;
 
+}
+.navImgContenedor{
+
+}
 .botonNav img{
-    height: 100px;
+    width: 100px;
 }
-
 footer{
+    position:absolute;
+    z-index: 0;
     height: 100px;
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
 }
-    
-
 .imgFooter{
-    height: 70px;
     width: 100%;
     margin: auto;
     display: flex;
@@ -170,7 +190,6 @@ footer{
     align-content: center;
     color: #fff;
 }
-
 .imgFooter img{
-    height: 100%;
+    width: 50%;
 }
