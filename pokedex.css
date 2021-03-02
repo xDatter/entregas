@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     background-image: url("recursos/imagenes/bg2.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
