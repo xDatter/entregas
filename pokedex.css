@@ -45,6 +45,7 @@ body{
     align-self: center;
     width: 100%;
     max-height: 50px;
+    z-index: 60;
 
 }
 .buscador{
@@ -93,24 +94,29 @@ body{
 .nombrePKM{
     display: block;
     flex-basis: 100%;
-    background: linear-gradient(to right, #33333339 40%, #ff222299 70%, #2222ff99 85%);
+    /* background: linear-gradient(to right, #33333339 40%, #ff222299 70%, #2222ff99 85%); */
     border-radius: 5px;
     max-height: 15%;
     padding: 10px 20px;
+    transition: 1s;
 }
 .espacioCompletoImg{
     display: flex;
     /* background: linear-gradient(to bottom,#33333339, transparent 90% ); */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
 .marcoImagen{
+    position: relative;
+    left: 0;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     height: 300px;
     padding: 50px;
     z-index: 50;
+    transition: 0.5s;
+
 
 }
 .imagenPKM1 {
@@ -174,7 +180,7 @@ body{
     height: 100%;
     z-index: 39;
     visibility: hidden;
-    transition: 1s;
+    transition: 0.1s;
 
 }
 .botonNav{
@@ -214,29 +220,39 @@ body{
 .navDespliegue{
     position: absolute;
     display: flex;
-    transition: 1s;
-    /* overflow-y: scroll; */
-    background: #22222201;
-    /* height: 360px; */
-    outline: rgb(128, 0, 0) 3px solid;
-    left: -50vw;
+    flex-wrap: wrap;
+    transition: 0.5s;
+    background: linear-gradient(to right, #00000090 40%, transparent );
+    left: -67vw;
     z-index: 40;
-    padding: 20px;
-    
-}
-.navDespliegue p{
+    padding: 100px 20px 20px 300px;    
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 5px;    
+    width: 800px;
+    height: 370px;
     color: rgb(255, 255, 255);
-    z-index: 100;
-    outline: rgb(128, 0, 0) 3px solid;
 
 }
+
 .navActive{
+    width: 820px;
+    height: 370px;
     position: absolute;
+    flex-grow: 1;
     opacity: 100%;
-    width:700px;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin:  auto;
+    background: linear-gradient(to right, #00000090 40%, transparent );
     visibility: visible;
-    
+}
+.wrapw{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;    
+}
+.imgActive{
+    position: relative;
+    left: -23vw;
 }
 footer{
     position:absolute;
@@ -268,4 +284,26 @@ footer{
 }
 .imgFooter img{
     width: 50%;
+}
+
+.colores{
+    
+    let pkmt1 = normal      A8A090
+    let pkmt2 = fighting    A05038
+    let pkmt3 = flying      98A8F0
+    let pkmt4 = poison      B058A0
+    let pkmt5 = ground      E9D6A4
+    let pkmt6 = rock        B8A058
+    let pkmt7 = bug         A8B820
+    let pkmt8 = ghost       6060B0
+    let pkmt9 = steel       A8A8C0
+    let pkmt10 = fire       F05030
+    let pkmt11 = water      3899F8
+    let pkmt12 = grass      78C850
+    let pkmt13 = electric   F8D030
+    let pkmt14 = psychic    F870A0
+    let pkmt15 = ice        58C8E0
+    let pkmt16 = dragon     7860E0
+    let pkmt17 = dark       7A5848
+    let pkmt18 = fairy      E79FE7
 }

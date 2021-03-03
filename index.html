@@ -27,14 +27,15 @@
             <div class="nombrePKM container">
                 <h3 class="nombrePKM__h3">Nombre place holder</h3>                
                 <h5 class="nombrePKM__h4">tipos place holder</h5>
-
             </div>
-                <div class="espacioCompletoImg">
-                    <div class="marcoImagen">
+
+            <div class="espacioCompletoImg">
+                <div class="marcoImagen">
                         <img class="imagenPKM1 " src="recursos/imagenes/starpokemon.ico"  alt="Por defecto">
                         <img class="imagenPKM2 hidear" src="recursos/imagenes/starpokemon.ico"  alt="Shiny">
-                    </div>
                 </div>
+            </div>
+            <input v-model="cambio1" id="vue1" type="hidden" value="" >
             <div class="controles">
                 <div class="botonControl controles__previo">
                     <div class="controlImgContenedor">
@@ -79,14 +80,15 @@
                     <p>Biología</p>
                 </div>
 
-                <div v-if="cambio1==1" class="navDespliegue " >
-                    <p class="info1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui odit quibusdam consectetur esse odio expedita, error amet at illo ipsa optio quis obcaecati doloribus saepe pariatur minima alias officiis?</p>
+                <div class="navDespliegue navDescripcion1" >
+                    <div class="info1 wrapw">Lorem ipsum dolor sit amet consnima alias officiis?</div>
                 </div>
-                <div v-else-if="cambio1==2" class="navDespliegue "  >
-                    <p class="info2"></p>
+                <div class="navDespliegue navDescripcion2"  >
+                    <div class="info2 wrapw">hola2</div>
+
                 </div>
-                <div v-else-if="cambio1==3" class="navDespliegue ">
-                    <p class="info3"></p>
+                <div class="navDespliegue navDescripcion3">
+                    <div class="info3 wrapw">hola 3</div>
                 </div>
             </nav>
         </div>
@@ -104,9 +106,7 @@
 
 <script src="jquery-3.5.1.min.js"></script>
 <script src="pokedex.js"></script>
-<script>
-    Vue.createApp(intercambios).mount("#contenedorPrincipal");
-</script>
+
 </body>
 
 </html>
