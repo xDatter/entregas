@@ -40,13 +40,21 @@ body{
     flex-wrap: wrap;
 
 }
-.container{
+.container1{
     display: flex;
     align-self: center;
     width: 100%;
     max-height: 50px;
     z-index: 60;
 
+}
+.container{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    max-height: 50px;
+    z-index: 60;
+    background: #11111150;
 }
 .buscador{
     position: relative;
@@ -59,20 +67,22 @@ body{
     box-shadow: 3px 3px 10px;
     z-index: 50;
 
-
 }
 .buscador__input{
     width: 100%;
     height: 50px;
     font-size: 25px;
     padding: 5px 10px;
+
 }
 .buscador__buscar{
     height: 50px;
     font-size: 20px;
-    background-color: #f33;
-    padding: 5px 5px;
+    background-color: rgb(204, 0, 0);
+    padding: 5px 10px;
     color: #fff;
+    text-shadow: black 2px 2px 2px;
+
 }
 .opcionesLateralIzq{
     position: relative;
@@ -223,7 +233,7 @@ body{
     flex-wrap: wrap;
     transition: 0.5s;
     background: linear-gradient(to right, #00000090 40%, transparent );
-    left: -67vw;
+    right: 130%;
     z-index: 40;
     padding: 100px 20px 20px 300px;    
     visibility: hidden;
@@ -236,10 +246,9 @@ body{
 }
 
 .navActive{
-    width: 820px;
     height: 370px;
     position: absolute;
-    flex-grow: 1;
+    flex-grow: 4;
     opacity: 100%;
     margin:  auto;
     background: linear-gradient(to right, #00000090 40%, transparent );
@@ -286,24 +295,3 @@ footer{
     width: 50%;
 }
 
-.colores{
-    
-    let pkmt1 = normal      A8A090
-    let pkmt2 = fighting    A05038
-    let pkmt3 = flying      98A8F0
-    let pkmt4 = poison      B058A0
-    let pkmt5 = ground      E9D6A4
-    let pkmt6 = rock        B8A058
-    let pkmt7 = bug         A8B820
-    let pkmt8 = ghost       6060B0
-    let pkmt9 = steel       A8A8C0
-    let pkmt10 = fire       F05030
-    let pkmt11 = water      3899F8
-    let pkmt12 = grass      78C850
-    let pkmt13 = electric   F8D030
-    let pkmt14 = psychic    F870A0
-    let pkmt15 = ice        58C8E0
-    let pkmt16 = dragon     7860E0
-    let pkmt17 = dark       7A5848
-    let pkmt18 = fairy      E79FE7
-}

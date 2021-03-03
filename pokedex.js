@@ -1,15 +1,13 @@
 window.onload=function(){
     $(".buscador__buscar").click(clickBuscar);
+    $(".controles__previo").click(clickPrevio);
+    $(".controles__siguiente").click(clickSiguiente);
     $(".controles__shiny").click(shiny);
     $(".navLateral__opcion1").click(btnNav1);   
     $(".navLateral__opcion2").click(btnNav2);
     $(".navLateral__opcion3").click(btnNav3);
-
 }
-
-
-
-
+let controlPrincipal = random();
 
 async function consultarPKM(url){
     $(".navDespliegue").toggleClass("navActive",false);
@@ -38,18 +36,15 @@ async function consultarPKM(url){
         fairy       :"E79FE7"
     }
 
-    // let hhhhola="fire";
-    // console.log(`#${colores[`${hhhhola}`]}99`)
-
-
     let respuesta= await fetch(url);
     let pokemon= await respuesta.json();
     let habil="";
     let stats="";
     let tipos=[];
-    
-
-
+    let tipo1;
+    let tipo2;
+    let color1;
+    let color2;
     
     pokemon.abilities.forEach(element => {
         habil+= `<div class="wrapw">${element.ability.name}<br><br> </div>`
@@ -62,12 +57,24 @@ async function consultarPKM(url){
     pokemon.types.forEach(element => {
         tipos.push(element.type.name);
     });
-    console.log(tipos)
 
-    $(".nombrePKM").css("background",`linear-gradient(to right, #33333339 40%, #00000090 70%, #2222ff99 85%)`);
+    if(tipos.length==1){
+        tipo1= tipos[0];
+        tipo2=""
+        color2= `#${colores[`${tipo1}`]}99`;
+        color1= color2;
+    }
+    else{      
+        tipo1= tipos[0];
+        tipo2= tipos[1];
+        color1= `#${colores[`${tipo1}`]}99`;
+        color2= `#${colores[`${tipo2}`]}99`;
+    }
+
+    $(".nombrePKM").css("background",`linear-gradient(to right, #11111150 40%, ${color1} 70%, ${color2} 85%)`);
     
-    $(".nombrePKM__h3").html(`ID ${pokemon.id} ||  ${pokemon.name}`);
-    $(".nombrePKM__h4").html(`ID -${pokemon.id} - ${pokemon.name}`);
+    $(".nombrePKM__h3").html(`ID -${pokemon.id} - ${pokemon.name}`);
+    $(".nombrePKM__h4").html(`type ${tipo1} ${tipo2}`);
     $(".imagenPKM1").toggleClass("hidear",false);
     $(".imagenPKM2").toggleClass("hidear",true);
     $(".imagenPKM1").attr("src",`${pokemon.sprites.front_default}`);
@@ -77,14 +84,35 @@ async function consultarPKM(url){
 
 
     $(".info2").html(stats);
-    $(".info3").html(tipos);
+    $(".info3").html(`<div class="wrapw">${tipo1}</div><div class="wrapw">${tipo2}</div>`);
 
+}
+
+async function random(){
+    let numeroRandom= Math.floor(Math.random()*898);
+    console.log(numeroRandom);
+    let url="https://pokeapi.co/api/v2/pokemon/"+numeroRandom;
+    consultarPKM(url);
+    return numeroRandom;
 }
 
 async function clickBuscar(){
     let buscador= $(".buscador__input").val();
     let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
-    let cambios= consultarPKM(url);
+    consultarPKM(url);
+    return buscador;
+}
+
+async function clickPrevio(){
+    let buscador= $(".buscador__input").val();
+    let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
+    consultarPKM(url);
+}
+
+async function clickSiguiente(){
+    let buscador= $(".buscador__input").val();
+    let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
+    consultarPKM(url);
 }
 
 function shiny(){
@@ -153,8 +181,12 @@ function btnNav3(){
         $(".navDescripcion3").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",false);
         $(".navDespliegue").attr("navDespliegueActive","0");
-        $(".nombrePKM__h3").css("color","#000");
+        $(".nombrePKM__h3").css("color","#000")
         $(".nombrePKM__h4").css("color","#000");
     }
 }
 
+async function mostrar(){
+    console.log( controlPrincipal+"hola");
+}
+mostrar();
