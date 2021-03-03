@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* outline: green double 4px; */
     
 }
 
@@ -20,7 +21,7 @@ body{
     position: relative;
     margin:  10px auto 0;
     width: 95%;
-    height: 97vh;
+    height: 98vh;
     border-radius: 25px;
     background-color: #bbbbbb99 ;
     display: flex;
@@ -97,10 +98,11 @@ body{
     max-height: 15%;
     padding: 10px 20px;
 }
-
 .espacioCompletoImg{
     display: flex;
-    background: linear-gradient(to bottom,#33333339, transparent 90% );
+    /* background: linear-gradient(to bottom,#33333339, transparent 90% ); */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 .marcoImagen{
     display: flex;
@@ -109,19 +111,19 @@ body{
     height: 300px;
     padding: 50px;
     z-index: 50;
-}
 
+}
 .imagenPKM1 {
     position: absolute;
     width: 200px;
-    z-index: 4;
+    z-index: 6;  
 
 }
 .imagenPKM2{
     position: absolute;
-
     width: 200px;
     z-index: 5;
+
 }
 .hidear{
     visibility: hidden;
@@ -137,7 +139,7 @@ body{
     margin-top: auto;
     color: #ddd;
     font-size: 20px;
-    max-height: 150px;
+    max-height: 140px;
 }
 .botonControl{
     display: flex;
@@ -149,7 +151,7 @@ body{
     background-color: #44444499;
     border-radius: 5px;
     margin: 0 ;
-    height: 150px;
+    height: 140px;
     max-width: 250px;
 
 }
@@ -161,44 +163,8 @@ body{
     background-color: #00000099;
     color: #0df;
 }
-
 .controlImgContenedor img{
     width: 80px;
-}
-.navLateral{
-    flex-grow: 1;
-    align-content: center;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-}
-.navDespliegue{
-    position: absolute;
-    display: flex;
-    transition: 1s;
-    overflow-y: scroll;
-    background: #22222201;
-    width: 700px;
-    height: 360px;
-    /* border: green 3px solid; */
-    left: -50vw;
-    z-index: 40;
-    padding: 20px;
-}
-.navDespliegue p{
-    color: rgb(255, 255, 255);
-    z-index: 100;
-}
-
-.navDespliegue1{
-    visibility: hidden;
-}
-.navDespliegue2{
-    visibility: hidden;
-}
-.navDespliegue3{
-    visibility: hidden;
 }
 .cortina{
     position: absolute;
@@ -211,11 +177,10 @@ body{
     transition: 1s;
 
 }
-
 .botonNav{
-    flex-basis: 150px;
-    min-width: 150px;
-    height: 150px;
+    flex-basis: 140px;
+    min-width: 140px;
+    height: 140px;
     flex-grow: 0;
     flex-shrink: 0;
     align-content: center;
@@ -235,15 +200,48 @@ body{
     background-color: #00000099;
     color: #0df;
 }
-
 .botonNav img{
     width: 100px;
 }
+.navLateral{
+    flex-grow: 1;
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.navDespliegue{
+    position: absolute;
+    display: flex;
+    transition: 1s;
+    /* overflow-y: scroll; */
+    background: #22222201;
+    /* height: 360px; */
+    outline: rgb(128, 0, 0) 3px solid;
+    left: -50vw;
+    z-index: 40;
+    padding: 20px;
+    
+}
+.navDespliegue p{
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    outline: rgb(128, 0, 0) 3px solid;
 
+}
+.navActive{
+    position: absolute;
+    opacity: 100%;
+    width:700px;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    
+}
 footer{
     position:absolute;
     top: 250px;
-    left: -105px;
+    left: -100px;
     z-index: 0;
     height: 100px;
     width: 100%;

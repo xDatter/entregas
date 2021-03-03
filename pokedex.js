@@ -3,6 +3,14 @@ window.onload=function(){
     $(".controles__shiny").click(shiny);
 }
 
+let intercambios={
+    data(){
+        return{
+            cambio1:"4",
+        }
+    }
+}
+
 async function consultarPKM(url){
     let respuesta= await fetch(url);
     let pokemon= await respuesta.json();
