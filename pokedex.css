@@ -125,7 +125,7 @@ body{
     height: 300px;
     padding: 50px;
     z-index: 50;
-    transition: 0.5s;
+    transition: 0.7s;
 
 
 }
@@ -239,14 +239,15 @@ body{
     visibility: hidden;
     opacity: 0;
     border-radius: 5px;    
-    width: 800px;
+    width: 1050px;
     height: 370px;
     color: rgb(255, 255, 255);
 
 }
 
 .navActive{
-    height: 370px;
+    height: 40%;
+    width: 920px;
     position: absolute;
     flex-grow: 4;
     opacity: 100%;
@@ -257,7 +258,8 @@ body{
 .wrapw{
     display: flex;
     flex-wrap: wrap;
-    min-width: 200px;    
+    min-width: 200px;
+    
 }
 .imgActive{
     position: relative;
