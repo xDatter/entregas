@@ -1,13 +1,19 @@
 window.onload=function(){
     $(".buscador__buscar").click(clickBuscar);
-    $(".controles__previo").click(clickPrevio);
-    $(".controles__siguiente").click(clickSiguiente);
+    $(".controles__previo").click(clickBuscar());
+    $(".controles__siguiente").click(clickBuscar());
     $(".controles__shiny").click(shiny);
     $(".navLateral__opcion1").click(btnNav1);   
     $(".navLateral__opcion2").click(btnNav2);
     $(".navLateral__opcion3").click(btnNav3);
+    random();
 }
-let controlPrincipal = random();
+function controlId(){
+    let controlId=  $(".idPKM").text();
+    console.log("asdsd-"+controlId+"-sad");
+
+}
+controlId();
 
 async function consultarPKM(url){
     $(".navDespliegue").toggleClass("navActive",false);
@@ -73,12 +79,13 @@ async function consultarPKM(url){
 
     $(".nombrePKM").css("background",`linear-gradient(to right, #11111150 40%, ${color1} 70%, ${color2} 85%)`);
     
-    $(".nombrePKM__h3").html(`ID -${pokemon.id} - ${pokemon.name}`);
+    $(".nombrePKM__h3").html(`${pokemon.name}`);
     $(".nombrePKM__h4").html(`type ${tipo1} ${tipo2}`);
     $(".imagenPKM1").toggleClass("hidear",false);
     $(".imagenPKM2").toggleClass("hidear",true);
     $(".imagenPKM1").attr("src",`${pokemon.sprites.front_default}`);
     $(".imagenPKM2").attr("src",`${pokemon.sprites.front_shiny}`);
+    $(".idPKM").text(pokemon.id);
     $(".info1").html(habil);
     $(".navDespliegue").attr("navDespliegueActive","0");
 
@@ -93,27 +100,20 @@ async function random(){
     console.log(numeroRandom);
     let url="https://pokeapi.co/api/v2/pokemon/"+numeroRandom;
     consultarPKM(url);
-    return numeroRandom;
 }
 
-async function clickBuscar(){
+async function clickBuscar(prevsig){
     let buscador= $(".buscador__input").val();
-    let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
-    consultarPKM(url);
-    return buscador;
-}
-
-async function clickPrevio(){
-    let buscador= $(".buscador__input").val();
+    if(prevsig==true){
+        buscador=prevsig;
+        console.log(prevsig+"hola prevsig");
+        console.log(buscador+"hola buscador prevsig");
+    }
     let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
     consultarPKM(url);
 }
 
-async function clickSiguiente(){
-    let buscador= $(".buscador__input").val();
-    let url="https://pokeapi.co/api/v2/pokemon/"+buscador;
-    consultarPKM(url);
-}
+
 
 function shiny(){
     $(".imagenPKM1").toggleClass("hidear");
@@ -129,16 +129,16 @@ function btnNav1(){
         $(".navDescripcion3").toggleClass("navActive",false);
         $(".navDescripcion2").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",true);
-        $(".nombrePKM__h3").css("color","#fff");
-        $(".nombrePKM__h4").css("color","#fff");
+        $(".nombrePKM__h3").css("color","#fff").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#fff").css("transition","all 1s");
 
     }
     else{
         $(".navDescripcion1").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",false);
         $(".navDespliegue").attr("navDespliegueActive","0");
-        $(".nombrePKM__h3").css("color","#000");
-        $(".nombrePKM__h4").css("color","#000");
+        $(".nombrePKM__h3").css("color","#000").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#000").css("transition","all 1s");
     }
 
 }
@@ -151,16 +151,16 @@ function btnNav2(){
         $(".navDescripcion1").toggleClass("navActive",false);
         $(".navDescripcion3").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",true);
-        $(".nombrePKM__h3").css("color","#fff");
-        $(".nombrePKM__h4").css("color","#fff");
+        $(".nombrePKM__h3").css("color","#fff").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#fff").css("transition","all 1s");
 
     }
     else{
         $(".navDescripcion2").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",false);
         $(".navDespliegue").attr("navDespliegueActive","0");
-        $(".nombrePKM__h3").css("color","#000");
-        $(".nombrePKM__h4").css("color","#000");
+        $(".nombrePKM__h3").css("color","#000").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#000").css("transition","all 1s");
     }
 
 }
@@ -173,20 +173,18 @@ function btnNav3(){
         $(".navDescripcion1").toggleClass("navActive",false);
         $(".navDescripcion2").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",true);
-        $(".nombrePKM__h3").css("color","#fff");
-        $(".nombrePKM__h4").css("color","#fff");
+        $(".nombrePKM__h3").css("color","#fff").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#fff").css("transition","all 1s");
 
     }
     else{
         $(".navDescripcion3").toggleClass("navActive",false);
         $(".marcoImagen").toggleClass("imgActive",false);
         $(".navDespliegue").attr("navDespliegueActive","0");
-        $(".nombrePKM__h3").css("color","#000")
-        $(".nombrePKM__h4").css("color","#000");
+        $(".nombrePKM__h3").css("color","#000").css("transition","all 1s");
+        $(".nombrePKM__h4").css("color","#000").css("transition","all 1s");
     }
 }
 
-async function mostrar(){
-    console.log( controlPrincipal+"hola");
-}
-mostrar();
+
+
