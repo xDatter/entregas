@@ -2,7 +2,7 @@
     margin:0 ;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'RocknRoll One', sans-serif;    
     /* outline: green double 4px; */
     
 }
@@ -112,13 +112,10 @@ body{
 .nombrePKM h3{
     font-size: 2em;
 }
-
 .nombrePKM h4{
     font-size: 1.2em;
 
 }
-
-
 .espacioCompletoImg{
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
@@ -174,7 +171,7 @@ body{
     margin-top: auto;
     color: #ddd;
     font-size: 20px;
-    max-height: 140px;
+    max-height: 240px;
 }
 .botonControl{
     display: flex;
@@ -185,11 +182,18 @@ body{
     text-align: center;
     background-color: #44444499;
     border-radius: 5px;
-    margin: 0 ;
+    margin: 10px 10px 0 10px;
     height: 140px;
     max-width: 250px;
-
 }
+
+.botonControl:first-child{
+    margin-left: 0;
+}
+.botonControl:last-child{
+    margin-right: 0;
+}
+
 .botonControl:hover {
     background-color: #11111199;
     color: #df0;

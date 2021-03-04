@@ -5,6 +5,9 @@ window.onload=function(){
     $(".controles__siguiente").click(btnNEXT);
 
     $(".controles__shiny").click(shiny);
+    $(".controles__random").click(random);
+
+
     $(".navLateral__opcion1").click(btnNav1);   
     $(".navLateral__opcion2").click(btnNav2);
     $(".navLateral__opcion3").click(btnNav3);
@@ -75,8 +78,11 @@ async function consultarPKM(url){
     }
 
     $(".nombrePKM").css("background",`linear-gradient(to right, #11111150 40%, ${color1} 70%, ${color2} 85%)`);
+    let remoprime= pokemon.name;
+    let PKMupper = remoprime.charAt(0).toUpperCase() + remoprime.slice(1)
     
-    $(".nombrePKM__h3").html(`${pokemon.name}`);
+    // $(".nombrePKM__h3").html(`${pokemon.name}`);
+    $(".nombrePKM__h3").html(PKMupper);
     $(".nombrePKM__h4").html(`type ${tipo1} ${tipo2}`);
     $(".imagenPKM1").toggleClass("hidear",false);
     $(".imagenPKM2").toggleClass("hidear",true);
@@ -93,7 +99,10 @@ async function consultarPKM(url){
 
 async function random(){
     let numeroRandom= Math.floor(Math.random()*898);
-    console.log(numeroRandom);
+    while(numeroRandom==0 || numeroRandom==899){
+        numeroRandom= Math.floor(Math.random()*898);
+        console.log("pasó por un while !! que poco probable : "+numeroRandom);
+    }
     let url="https://pokeapi.co/api/v2/pokemon/"+numeroRandom;
     consultarPKM(url);
 }
